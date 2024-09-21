@@ -9,6 +9,9 @@
   --pine: #31748f;
   --foam: #9ccfd8;
   --iris: #c4a7e7;
+  --highlight-low: #21202e;
+  --highlight-med: #403d52;
+  --highlight-high: #524f67;
 
   @media (prefers-color-scheme: light) {
     --base: #faf4ed;
@@ -21,23 +24,32 @@
     --pine: #286983;
     --foam: #56949f;
     --iris: #907aa9;
+    --highlight-low: #f4ede8;
+    --highlight-med: #dfdad9;
+    --highlight-high: #cecacd;
   }
 
   --font: "FairiesevkaSans Nerd Font Propo";
-  --bgcolor: var(--surface);
-  --linkcolor: var(--text);
+  --page-bg: var(--base);
+  --clock-fg: var(--text);
+  --search-bg: var(--overlay);
+  --search-fg: var(--rose);
+  --link-bg: var(--surface);
+  --link-fg: var(--text);
+  --link-hover-fg: var(--foam);
+  --shadow: var(--highlight-med);
 }
 
 /*-----------------------------------------------------------*/
 input {
   height: inherit;
   width: 680px;
-  background: var(--overlay);
-  color: var(--rose);
+  background: var(--search-bg);
+  color: var(--search-fg);
   font: var(--font);
   font-weight: mono;
   line-height: 1.8em;
-  box-shadow: 1px 1px 3px #000000;
+  box-shadow: 1px 1px 3px var(--shadow);
   border: none;
   text-align: center;
   border-radius: 8px;
@@ -52,7 +64,7 @@ body {
 	background-image: url('../background/bg.jpg');
 	background-repeat : no-repeat;
 */
-  background-color: var(--base);
+  background-color: var(--page-bg);
   background-size: cover;
 }
 
@@ -71,9 +83,9 @@ body {
   width: 140px;
   text-align: left;
   padding-left: 3%;
-  background-color: var(--bgcolor);
+  background-color: var(--link-bg);
   border-radius: 8px;
-  box-shadow: 2px 2px 8px #000000;
+  box-shadow: 2px 2px 8px var(--shadow);
 }
 
 .box {
@@ -89,7 +101,7 @@ a {
   display: block;
   line-height: 2.4em;
   font-family: var(--font);
-  color: var(--linkcolor);
+  color: var(--link-fg);
   font-size: 1rem;
   text-decoration: none;
   outline: none;
@@ -97,7 +109,7 @@ a {
 }
 
 a:hover {
-  color: var(--foam);
+  color: var(--link-hover-fg);
 }
 
 .time {
@@ -105,7 +117,7 @@ a:hover {
   font-weight: mono;
   font-size: 5.5rem;
   margin: 50px 0px 50px 0px;
-  color: var(--linkcolor);
+  color: var(--clock-fg);
   text-shadow:
     -5px 5px 0px var(--love),
     -10px 10px var(--gold),
