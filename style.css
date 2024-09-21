@@ -30,6 +30,7 @@
   }
 
   --font: "FairiesevkaSans Nerd Font Propo";
+  --clock-font: "FairiesevkaSans Nerd Font Propo Heavy";
   --page-bg: var(--base);
   --clock-fg: var(--text);
   --search-bg: var(--overlay);
@@ -113,7 +114,7 @@ a:hover {
 }
 
 .time {
-  font-family: var(--font), monospace;
+  font-family: var(--clock-font), monospace;
   font-weight: mono;
   font-size: 5.5rem;
   margin: 50px 0px 50px 0px;
